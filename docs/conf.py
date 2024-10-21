@@ -24,6 +24,7 @@ if _version.is_postrelease:
 elif _version.is_devrelease:
     version = release = f"{_version.base_version}.dev{_version.dev}"
 is_development = _version.is_devrelease
+is_release = not(_version.is_prerelease or _version.is_devrelease)
 
 project = "sunpy-soar"
 copyright = f"{datetime.datetime.now().year}, The SunPy Community"  # NOQA: A001, DTZ005
@@ -54,6 +55,12 @@ default_role = "obj"
 napoleon_use_rtype = False
 napoleon_google_docstring = False
 
+<<<<<<<
+=======
+# Treat everything in single ` as a Python reference.
+default_role = "py:obj"
+
+>>>>>>>
 # -- Options for intersphinx extension ---------------------------------------
 intersphinx_mapping = {
     "python": (
@@ -77,6 +84,24 @@ intersphinx_mapping = {
     "parfive": ("https://parfive.readthedocs.io/en/stable/", None),
 }
 
+<<<<<<<
+=======
+# Render inheritance diagrams in SVG
+graphviz_output_format = "svg"
+
+graphviz_dot_args = [
+    "-Nfontsize=10",
+    "-Nfontname=Helvetica Neue, Helvetica, Arial, sans-serif",
+    "-Efontsize=10",
+    "-Efontname=Helvetica Neue, Helvetica, Arial, sans-serif",
+    "-Gfontsize=10",
+    "-Gfontname=Helvetica Neue, Helvetica, Arial, sans-serif",
+]
+
+# Add any paths that contain custom static files (such as style sheets) here,
+# relative to this directory. They are copied after the builtin static files,
+# so a file named "default.css" will overwrite the builtin "default.css".
+>>>>>>>
 # -- Options for HTML output -------------------------------------------------
 html_theme = "sunpy"
 graphviz_output_format = "svg"
