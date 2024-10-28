@@ -24,6 +24,7 @@ if _version.is_postrelease:
 elif _version.is_devrelease:
     version = release = f"{_version.base_version}.dev{_version.dev}"
 is_development = _version.is_devrelease
+is_release = not(_version.is_prerelease or _version.is_devrelease)
 
 project = "sunpy-soar"
 copyright = f"{datetime.datetime.now().year}, The SunPy Community"  # NOQA: A001, DTZ005
@@ -85,14 +86,59 @@ graphviz_dot_args = [
     "-Nfontname=Helvetica Neue, Helvetica, Arial, sans-serif",
     "-Efontsize=10",
     "-Efontname=Helvetica Neue, Helvetica, Arial, sans-serif",
+<<<<<<<
     "-Gfontsize=10",
     "-Gfontname=Helvetica Neue, Helvetica, Arial, sans-serif",
 ]
 
+=======
+]
+
+# Add any paths that contain templates here, relative to this directory.
+# templates_path = ["_templates"]  # NOQA: ERA001
+
+# List of patterns, relative to source directory, that match files and
+# directories to ignore when looking for source files.
+>>>>>>>
+<<<<<<<
 # -- Options for sphinx-copybutton ---------------------------------------------
 # Python Repl + continuation, Bash, ipython and qtconsole + continuation, jupyter-console + continuation
+=======
+master_doc = "index"
+
+# Treat everything in single ` as a Python reference.
+default_role = "py:obj"
+
+# -- Options for intersphinx extension ---------------------------------------
+
+>>>>>>>
+<<<<<<<
 copybutton_prompt_text = r">>> |\.\.\. |\$ |In \[\d*\]: | {2,5}\.\.\.: | {5,8}: "
 copybutton_prompt_is_regexp = True
+=======
+# a list of builtin themes.
+html_theme = "alabaster"
+
+# Render inheritance diagrams in SVG
+graphviz_output_format = "svg"
+
+graphviz_dot_args = [
+    "-Nfontsize=10",
+    "-Nfontname=Helvetica Neue, Helvetica, Arial, sans-serif",
+    "-Efontsize=10",
+    "-Efontname=Helvetica Neue, Helvetica, Arial, sans-serif",
+    "-Gfontsize=10",
+    "-Gfontname=Helvetica Neue, Helvetica, Arial, sans-serif",
+]
+
+# Add any paths that contain custom static files (such as style sheets) here,
+# relative to this directory. They are copied after the builtin static files,
+# so a file named "default.css" will overwrite the builtin "default.css".
+# html_static_path = ["_static"]  # NOQA: ERA001
+
+# By default, when rendering docstrings for classes, sphinx.ext.autodoc will
+# make docs with the class-level docstring and the class-method docstrings,
+>>>>>>>
 
 # Enable nitpicky mode, which forces links to be non-broken
 nitpicky = True
